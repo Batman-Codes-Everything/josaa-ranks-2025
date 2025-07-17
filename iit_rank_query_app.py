@@ -8,13 +8,16 @@ def load_data():
         df_iit_2022 = pd.read_csv("data/ranks2022.csv")
         df_iit_2023 = pd.read_csv("data/ranks2023.csv")
         df_iit_2024 = pd.read_csv("data/ranks2024.csv")
+        df_iit_2025 = pd.read_csv("data/ranks2025.csv")
         
         df_nit_2022 = pd.read_csv("data/nits2022.csv")
         df_nit_2023 = pd.read_csv("data/nits2023.csv")
         df_nit_2024 = pd.read_csv("data/nits2024.csv")
+        df_nit_2025 = pd.read_csv("data/nits2025.csv")
         
         df_iiit_2022 = pd.read_csv("data/IIITs2022.csv")
         df_iiit_2023 = pd.read_csv("data/IIITs2023.csv")
+        df_iiit_2025 = pd.read_csv("data/IIITs2025.csv")
         df_iiit_2024 = pd.read_csv("data/IIITs2024.csv")
         
         df_gfti_2022 = pd.read_csv("data/GFTIs2022.csv")
@@ -22,11 +25,11 @@ def load_data():
         df_gfti_2024 = pd.read_csv("data/GFTIs2024.csv")
         
         return {
-            'IIT': {2022: df_iit_2022, 2023: df_iit_2023, 2024: df_iit_2024},
-            'NIT': {2022: df_nit_2022, 2023: df_nit_2023, 2024: df_nit_2024},
-            'IIIT': {2022: df_iiit_2022, 2023: df_iiit_2023, 2024: df_iiit_2024},
+            'IIT': {2022: df_iit_2022, 2023: df_iit_2023, 2024: df_iit_2024, 2025: df_iit_2025},
+            'NIT': {2022: df_nit_2022, 2023: df_nit_2023, 2024: df_nit_2024, 2025: df_nit_2025},
+            'IIIT': {2022: df_iiit_2022, 2023: df_iiit_2023, 2024: df_iiit_2024, 2025:df_iiit_2025},
             'GFTI': {2022: df_gfti_2022, 2023: df_gfti_2023, 2024: df_gfti_2024}
-        }
+         }
     except FileNotFoundError as e:
         st.error(f"CSV file not found: {e}")
         return None
@@ -70,10 +73,11 @@ st.markdown("<h1 style='text-align: center;'>🎓 JOSAA College & Branch Finder<
 st.markdown("<p style='text-align: center;'>Find eligible colleges and programs across IITs, NITs, IIITs, and GFTIs based on your JEE rank, category, and gender.</p>", unsafe_allow_html=True)
 st.markdown("""<hr style="margin-top: 2em;">""", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Created by Musaib Bin Bashir.</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Forked by Batman Codes.</p>", unsafe_allow_html=True)
 
 exam_type = st.selectbox("Select exam", ["JEE Advanced", "JEE Mains"])
 rank = st.number_input(f"Enter your {exam_type} rank (category rank, if applicable)", min_value=1, value=1000)
-year = st.selectbox("Select year", [2022, 2023, 2024])
+year = st.selectbox("Select year", [2022, 2023, 2024, 2025])
 
 if exam_type == "JEE Advanced":
     institute_type = "IITs"
@@ -109,8 +113,9 @@ with st.expander("ℹ️ Help"):
     """)
     
     st.markdown("""
-    - **Quota Types** (for NITs, IIITs, GFTIs):
+    - **Quota Types**:
         - *OS* = Other State quota
+        - Quotas are available for NITs, IIITs and GFTIs
         - *HS* = Home State quota
         - *AI* = All India Quota
         - Results will show both OS and HS quotas in the Quota column where applicable
