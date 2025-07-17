@@ -86,16 +86,6 @@ A comprehensive Streamlit web application to help JEE candidates find eligible c
 - **NumPy**: Numerical computing
 - **BeautifulSoup**: JSON Data parsing
 
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/NewFeature`)
-3. Commit your changes (`git commit -m 'Add some NewFeature'`)
-4. Push to the branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
-6. NOTE: I've made a Jupyter notebook to parse the JSON data into a properly structured CSV, if you want that, drop me a mail at musaibbashir02@gmail.com
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -103,6 +93,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Musaib Bin Bashir**
+
+## 👨‍💻 Forker
+
+**Batman Codes**
 
 
 **Happy College Hunting! 🎯**
