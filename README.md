@@ -1,5 +1,5 @@
 # 🎓 JOSAA College & Branch Finder
-[Visit the site- JOSAA-Ranks](https://josaa-ranks.streamlit.app/)
+[Visit the site- JOSAA-Ranks](https://josaa-ranks-updated.streamlit.app/)
 
 
 A comprehensive Streamlit web application to help JEE candidates find eligible colleges and engineering programs across IITs, NITs, IIITs, and GFTIs based on their rank, category, and preferences with data taken from official JOSAA website.
